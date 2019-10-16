@@ -1,0 +1,34 @@
+<div class="col-md-4 offset-4 mt-4 mb-4 card card-body">
+    <form action="" [formGroup]="form" (ngSubmit) = "loginData(form)">
+        <h1 class="text-center text-white bg-warning">Reactive Form</h1>
+        <div class="form-group">
+            <input type="text" name="movie" id="movie" class="form-control" placeholder="Add Movie" formControlName="movie">
+        <div *ngIf = "movie.touched && movie.invalid">
+<p *ngIf = "movie.errors.required"class = "text-danger">*this field is required</p>
+
+        </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="title" id="title" class="form-control" placeholder="Movie title" formControlName = "title">
+            <div *ngIf = "title.touched && title.invalid">
+                    <p *ngIf = "title.errors.required" class="text-danger">*this field is required</p>
+                            </div>
+        </div>
+        <div class="form-group">
+            <input type="url" name="image" id="image" class="form-control" placeholder="Movie img url" formControlName = "image">
+            <div *ngIf = "image.touched && image.invalid">
+                    <p *ngIf = "image.errors.required" class="text-danger">*this field is required</p>
+                            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" name="des" id="des" class="form-control" placeholder="Movie Description" formControlName = "des">
+            <div *ngIf = "des.touched && des.invalid">
+                    <p *ngIf = "des.errors.required" class="text-danger">*this field is required</p>
+                            </div>
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-dark float-right"[disabled] = "form.invalid">add</button>
+        </div>
+    </form>
+</div>
