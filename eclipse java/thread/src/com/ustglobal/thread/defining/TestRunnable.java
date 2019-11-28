@@ -1,0 +1,17 @@
+package com.ustglobal.thread.defining;
+
+public class TestRunnable {
+	public static void main(String[] args) {
+		System.out.println("Main started");
+		
+		MyRunnable mr = new MyRunnable();
+	//	m.start(); start() is undefined is MyRunnable
+		Thread t = new Thread(mr);
+		t.start();
+		
+		for(int i = 0;i<10;i++) {
+			System.out.println("main thread");
+		}
+		System.out.println("main ended");
+	}
+}
