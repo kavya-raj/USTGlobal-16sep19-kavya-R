@@ -1,0 +1,9 @@
+package com.ustglobal.springcore;
+
+import org.springframework.context.ApplicationContext;
+
+public class BookConfiguration {
+public static void main(String[] args) {
+	
+}
+}

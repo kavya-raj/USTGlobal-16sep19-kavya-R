@@ -1,0 +1,20 @@
+package com.ustglobal.springcore.di;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+@Configuration
+public class ConfigurationClass {
+	@Bean(name="hello")
+	@Scope("prototype")
+	public Hello getHello() {
+		Hello hello = new Hello();
+		hello.setMsg("i love chicken");
+		return  hello;
+	}
+	
+	public Dog getDog() {
+		return new Dog();
+	}
+}

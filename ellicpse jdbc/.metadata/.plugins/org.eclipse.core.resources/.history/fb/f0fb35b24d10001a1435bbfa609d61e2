@@ -1,0 +1,8 @@
+package com.ustglobal.springcore.di;
+
+public class Author {
+	
+	String name;
+	String penname;
+	
+}

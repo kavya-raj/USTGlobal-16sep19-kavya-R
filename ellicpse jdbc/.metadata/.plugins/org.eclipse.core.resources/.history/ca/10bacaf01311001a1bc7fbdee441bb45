@@ -1,0 +1,5 @@
+package com.ustglobal.spingmvc.controller;
+
+public class HelloController {
+
+}
